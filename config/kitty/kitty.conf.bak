@@ -1,0 +1,22 @@
+
+
+# BEGIN_KITTY_THEME
+# Noctalia
+#include current-theme.conf
+# END_KITTY_THEME
+#include 1984 Dark.conf
+
+clipboard_control write-clipboard read-clipboard
+
+
+# BEGIN_KITTY_FONTS
+font_family      family="JetBrainsMonoNL Nerd Font"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS
+
+background_opacity 0.80
+#光标尾迹
+cursor_trail 1
+cursor_trail_color none

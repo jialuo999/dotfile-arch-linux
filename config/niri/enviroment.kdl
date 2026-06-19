@@ -1,0 +1,22 @@
+
+environment {
+	LANG "zh_CN.UTF-8"
+	LC_CTYPE "en_US.UTF-8"
+
+	QT_QPA_PLATFORMTHEME "qt6ct"
+    XDG_CURRENT_DESKTOP "niri"
+	QT_IM_MODULES "wayland;fcitx" //中文输入法支持,
+    QT_IM_MODULE "fcitx"
+	XMODIFIERS "@im=fcitx"
+	QT_QPA_PLATFORM "wayland;xcb" 
+	ELECTRON_OZONE_PLATFORM_HINT "auto"// Electron > 28应用支持
+
+
+
+}
+
+//debug {
+//    render-drm-device "/dev/dri/renderD129"
+ //   honor-xdg-activation-with-invalid-serial
+//    wait-for-frame-completion-before-queueing
+//}

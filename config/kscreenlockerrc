@@ -1,0 +1,7 @@
+[Daemon]
+Timeout=10
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=file:///home/jialuo/Pictures/Wallpapers/云虫.png
+PreviewImage=file:///home/jialuo/Pictures/Wallpapers/云虫.png
+SlidePaths=/home/jialuo/.local/share/wallpapers/,/usr/share/wallpapers/

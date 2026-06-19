@@ -1,0 +1,20 @@
+# Sensitive / cache files
+*.zwc
+__pycache__/
+*.pyc
+node_modules/
+
+# Yazi - large flavor assets
+config/yazi/flavors/**/preview.png
+config/yazi/flavors/**/README.md
+config/yazi/flavors/**/LICENSE*
+
+# Large svg themes
+config/Kvantum/**/*.svg
+
+# Cache / lock files
+config/nvim/lazy-lock.json
+.cache/
+
+# GPU screen recorder token
+config/gpu-screen-recorder/restore_token

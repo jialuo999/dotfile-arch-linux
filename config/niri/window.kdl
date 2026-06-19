@@ -1,0 +1,71 @@
+//显示器规则
+output "eDP-1"{
+    mode "2560x1600@240.000"
+    scale 1.45
+    position x=0 y=0
+    focus-at-startup
+}
+
+//通用窗口规则
+window-rule {
+  geometry-corner-radius 7
+  //opacity 0.97
+  clip-to-geometry true
+  draw-border-with-background false
+}
+//从noctalia显示通知和打开窗口
+debug {
+  honor-xdg-activation-with-invalid-serial
+}
+
+//预览窗口显示noctalia shell壁纸
+layer-rule {
+  match namespace="^noctalia-overview*"
+  place-within-backdrop true
+}
+//透明度为1的应用
+window-rule {
+	match title="图片查看器"
+	match app-id="io.github.celluloid_player.Celluloid"
+	match app-id="mpv"
+	match title="图像查看器"
+	match app-id=r#"^libreoffice.*$"#
+    match app-id="firefox"
+    match app-id="org.gnome.Loupe"
+    match app-id="krita"
+
+	opacity 1.00
+}
+//打开为浮动窗口的应用
+window-rule {
+	match title="图片查看器"
+    match title="图片和视频"
+    match app-id="org.gnome.Loupe"
+    match app-id="com.jialuo.niripet"
+    match app-id="org.kde.plasma.emojier"
+
+	open-floating true
+}
+//特殊透明度窗口规则
+window-rule {
+	match app-id="kitty"
+	opacity 0.89
+    background-effect {
+        blur true
+    }
+}
+/-window-rule {
+   match app-id="code"
+   opacity 0.95
+   background-effect {
+        blur true
+    }
+}
+/-layer-rule {
+    match namespace="^launcher$"
+    background-effect {
+        blur true
+    }
+    geometry-corner-radius 10
+    opacity 0.90
+}

@@ -1,0 +1,5 @@
+{
+    "aururl":"https://aur.archlinux.org",
+    "downloadtimeout":300,
+    "sudoflags":"-E"
+}

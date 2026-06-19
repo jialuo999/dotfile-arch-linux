@@ -1,0 +1,188 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](m_primary)\
+$os\
+$username\
+[](bg:m_secondary fg:m_primary)\
+$directory\
+[](fg:m_secondary bg:m_primary_container)\
+$git_branch\
+$git_status\
+[](fg:m_primary_container bg:m_tertiary)\
+$c\
+$cpp\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:m_tertiary bg:m_tertiary_container)\
+$docker_context\
+$conda\
+$pixi\
+[](fg:m_tertiary_container bg:m_surface_variant)\
+$time\
+[ ](fg:m_surface_variant)\
+$line_break$character"""
+
+palette = 'noctalia'
+
+[palettes.noctalia]
+m_surface = "#091517"
+m_on_surface = "#d7e5e7"
+m_surface_variant = "#334b4f"
+m_on_surface_variant = "#b1cbd0"
+m_primary = "#77daa0"
+m_on_primary = "#003920"
+m_primary_container = "#005230"
+m_secondary = "#93d5aa"
+m_on_secondary = "#003920"
+m_tertiary = "#82d3e0"
+m_on_tertiary = "#00363d"
+m_tertiary_container = "#004f58"
+m_on_tertiary_container = "#9eeffd"
+m_success = "#93d5aa"
+m_error = "#ffb4ab"
+m_warning = "#82d3e0"
+m_outline = "#7c959a"
+
+[os]
+disabled = false
+style = "bg:m_primary fg:m_on_primary"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Pop = ""
+
+[username]
+show_always = true
+style_user = "bg:m_primary fg:m_on_primary"
+style_root = "bg:m_error fg:m_on_primary"
+format = '[ $user ]($style)'
+
+[directory]
+style = "bg:m_secondary fg:m_on_secondary"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:m_primary_container"
+format = '[[ $symbol $branch ](fg:m_on_surface bg:m_primary_container)]($style)'
+
+[git_status]
+style = "bg:m_primary_container"
+format = '[[($all_status$ahead_behind )](fg:m_on_surface bg:m_primary_container)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:m_tertiary"
+format = '[[ $symbol( $version) ](fg:m_on_tertiary bg:m_tertiary)]($style)'
+
+[c]
+symbol = " "
+style = "bg:m_tertiary"
+format = '[[ $symbol( $version) ](fg:m_on_tertiary bg:m_tertiary)]($style)'
+
+[cpp]
+symbol = " "
+style = "bg:m_tertiary"
+format = '[[ $symbol( $version) ](fg:m_on_tertiary bg:m_tertiary)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:m_tertiary"
+format = '[[ $symbol( $version) ](fg:m_on_tertiary bg:m_tertiary)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:m_tertiary"
+format = '[[ $symbol( $version) ](fg:m_on_tertiary bg:m_tertiary)]($style)'
+
+[php]
+symbol = ""
+style = "bg:m_tertiary"
+format = '[[ $symbol( $version) ](fg:m_on_tertiary bg:m_tertiary)]($style)'
+
+[java]
+symbol = ""
+style = "bg:m_tertiary"
+format = '[[ $symbol( $version) ](fg:m_on_tertiary bg:m_tertiary)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:m_tertiary"
+format = '[[ $symbol( $version) ](fg:m_on_tertiary bg:m_tertiary)]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:m_tertiary"
+format = '[[ $symbol( $version) ](fg:m_on_tertiary bg:m_tertiary)]($style)'
+
+[python]
+symbol = ""
+style = "bg:m_tertiary"
+format = '[[ $symbol( $version) ](fg:m_on_tertiary bg:m_tertiary)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:m_tertiary_container"
+format = '[[ $symbol( $context) ](fg:m_on_tertiary_container bg:m_tertiary_container)]($style)'
+
+[conda]
+style = "bg:m_tertiary_container"
+format = '[[ $symbol( $environment) ](fg:m_on_tertiary_container bg:m_tertiary_container)]($style)'
+
+[pixi]
+style = "bg:m_tertiary_container"
+format = '[[ $symbol( $version)( $environment) ](fg:m_on_tertiary_container bg:m_tertiary_container)]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:m_surface_variant"
+format = '[[  $time ](fg:m_on_surface_variant bg:m_surface_variant)]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:m_success)'
+error_symbol = '[](bold fg:m_error)'
+vimcmd_symbol = '[](bold fg:m_success)'
+vimcmd_replace_one_symbol = '[](bold fg:m_tertiary)'
+vimcmd_replace_symbol = '[](bold fg:m_tertiary)'
+vimcmd_visual_symbol = '[](bold fg:m_warning)'

@@ -1,0 +1,23 @@
+gtk-enable-animations=1
+gtk-primary-button-warps-slider=1
+gtk-cursor-blink-time=1000
+gtk-cursor-blink=1
+gtk-sound-theme-name="ocean"
+# DO NOT EDIT! This file will be overwritten by nwg-look.
+# Any customization should be done in ~/.gtkrc-2.0.mine instead.
+
+gtk-theme-name="adw-gtk3"
+gtk-icon-theme-name="Tela"
+gtk-font-name="ChillRoundM,  10"
+gtk-cursor-theme-name="hei_cursors"
+gtk-cursor-theme-size=64
+gtk-toolbar-style=3
+gtk-toolbar-icon-size=GTK_ICON_SIZE_SMALL_TOOLBAR
+gtk-button-images=1
+gtk-menu-images=1
+gtk-enable-event-sounds=1
+gtk-enable-input-feedback-sounds=0
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle="hintslight"
+gtk-xft-rgba="rgb"
