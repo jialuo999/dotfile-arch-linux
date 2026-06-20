@@ -1,0 +1,21 @@
+#!/bin/bash
+# ~/bin/ff 
+#
+#带有每日一言和二次元图片的fastfetch包装
+
+CACHE_FILE="$HOME/.cache/anime-fastfetch/fastfetch_hitokoto"
+# 1. 正常显示
+
+fastfetch --config ~/.config/fastfetch/config_wife.jsonc
+
+if [ -f "$CACHE_FILE" ] && [  -s  "$CACHE_FILE" ] ; then
+    echo -e " \e[34m 󰭖 Quote:\e[0m \e[3m$(cat "$CACHE_FILE" )\e[0m"
+else 
+    echo -e " \e[34m 󰭖 Quote:\e[0m \e[3m清风理残影......\e[0m"
+fi
+# 2. 显示完之后，后台静默：清缓存 + 拉下一张
+(rm -rf ~/.cache/fastfetch && ./bin/fetch_anime.sh) &>/dev/null &
+disown
+
+ curl -s --connect-timeout 2 -f "https://v1.hitokoto.cn/?encode=text" > "$CACHE_FILE"
+

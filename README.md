@@ -11,6 +11,11 @@ home/           # Top-level dotfiles (~/.*)
   .gitconfig
   ...
 
+bin/            # Personal scripts (~/bin/)
+  fetch_anime.sh
+  ff
+  fuzzel-hitokoto.sh
+
 config/         # Config directories (~/.config/<name>)
   niri/         # Wayland compositor (Niri)
   kitty/        # Terminal emulator
@@ -41,3 +46,7 @@ config/         # Config directories (~/.config/<name>)
 - **Font**: ChillRoundM
 - **Icons**: Tela
 - **Cursor**: hei_cursors
+
+## Screenshots
+
+![Effect 1](pic/effect1.png)
