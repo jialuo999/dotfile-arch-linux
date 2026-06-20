@@ -1,6 +1,6 @@
 # dotfile-arch-linux
 
-Arch Linux dotfiles backup. Last updated: 2026-06-19.
+Arch Linux dotfiles backup. Last updated: 2026-06-20.
 
 ## Structure
 
@@ -28,7 +28,7 @@ config/         # Config directories (~/.config/<name>)
   fcitx5/       # Input method (Rime)
   cava/         # Audio visualizer
   mpv/          # Media player
-  Kvantum/      # Qt/Kvantum themes
+  noctalia/     # Niri bar (noctalia-shell) config & templates
   qt5ct/qt6ct/  # Qt theme config
   gtk-3.0/gtk-4.0/  # GTK theme config
   environment.d/    # Environment variables
@@ -40,13 +40,14 @@ config/         # Config directories (~/.config/<name>)
 
 ## Key Details
 
-- **Compositor**: Niri (scrollable-tiling Wayland compositor)
+- **Compositor**: Niri
 - **Shell**: Zsh with Oh-My-Zsh + Starship prompt
-- **Input**: Fcitx5 + Rime (Chinese input)
-- **DE/Theme**: KDE Plasma + adw-gtk3
+- **niri bar**: noctalia-shell
+- **KDE Plasma Theme**:  ChromeOS-dark
 - **Font**: ChillRoundM
 - **Icons**: Tela
 - **Cursor**: cat_cursors(on niri)/hei_cursors(on kde)
+- **Terminal Font**: JetBrainsMonoNLNF-Regular
 
 ## Screenshots
 
