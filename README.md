@@ -35,6 +35,7 @@ config/         # Config directories (~/.config/<name>)
   xsettingsd/   # Xsettings daemon
   pacseek/      # Pacman frontend
   yay/          # AUR helper
+  fontconfig/   # Font configuration (CJK, aliases)
   ...
 ```
 
