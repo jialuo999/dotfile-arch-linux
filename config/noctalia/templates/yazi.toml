@@ -1,0 +1,917 @@
+# : Manager [[[
+
+[mgr]
+cwd = { fg = "{{colors.on_surface.dark.hex}}" }
+
+# Find
+find_keyword = { fg = "{{colors.error.dark.hex}}", bold = true, italic = true, underline = true }
+find_position = { fg = "{{colors.error.dark.hex}}", bold = true, italic = true }
+
+# Marker
+marker_copied = { fg = "{{colors.tertiary_container.dark.hex}}", bg = "{{colors.tertiary_container.dark.hex}}" }
+marker_cut = { fg = "{{colors.tertiary_container.dark.hex}}", bg = "{{colors.tertiary_container.dark.hex}}" }
+marker_marked = { fg = "{{colors.error.dark.hex}}", bg = "{{colors.error.dark.hex}}" }
+marker_selected = { fg = "{{colors.tertiary.dark.hex}}", bg = "{{colors.tertiary.dark.hex}}" }
+
+# Count
+count_copied = { fg = "{{colors.on_tertiary_container.dark.hex}}", bg = "{{colors.tertiary_container.dark.hex}}" }
+count_cut = { fg = "{{colors.on_tertiary_container.dark.hex}}", bg = "{{colors.tertiary_container.dark.hex}}" }
+count_selected = { fg = "{{colors.on_primary.dark.hex}}", bg = "{{colors.tertiary.dark.hex}}" }
+
+# Border
+border_style  = { fg = "{{colors.primary.dark.hex}}" }
+
+# : ]]]
+
+
+# : Status [[[
+
+[status]
+overall = { fg = "{{colors.primary.dark.hex}}" }
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+# Progress
+progress_label = { bold = true }
+progress_normal = { fg = "{{colors.primary.dark.hex}}", bg = "{{colors.surface.dark.hex}}" }
+progress_error = { fg = "{{colors.error.dark.hex}}", bg = "{{colors.surface.dark.hex}}" }
+
+# Permissions
+perm_type = { fg = "{{colors.secondary.dark.hex}}" }
+perm_write = { fg = "{{colors.tertiary.dark.hex}}" }
+perm_exec = { fg = "{{colors.error.dark.hex}}" }
+perm_read = { fg = "{{colors.tertiary_container.dark.hex}}" }
+perm_sep = { fg = "{{colors.primary_container.dark.hex}}" }
+
+# : ]]]
+
+
+# : Mode [[[
+
+[mode]
+
+normal_main = { bg = "{{colors.primary.dark.hex}}", fg = "{{colors.on_primary.dark.hex}}", bold = true }
+normal_alt  = { bg = "{{colors.surface_variant.dark.hex}}", fg = "{{colors.on_surface_variant.dark.hex}}" }
+
+select_main = { bg = "{{colors.secondary.dark.hex}}", fg = "{{colors.on_secondary.dark.hex}}", bold = true }
+select_alt  = { bg = "{{colors.surface_variant.dark.hex}}", fg = "{{colors.on_surface_variant.dark.hex}}" }
+
+unset_main = { bg = "{{colors.tertiary.dark.hex}}", fg = "{{colors.on_tertiary.dark.hex}}", bold = true }
+unset_alt  = { bg = "{{colors.surface_variant.dark.hex}}", fg = "{{colors.on_surface_variant.dark.hex}}" }
+
+# : ]]]
+
+
+# : Input [[[
+
+[input]
+border = { fg = "{{colors.primary.dark.hex}}" }
+title = {}
+value = { fg = "{{colors.on_surface.dark.hex}}" }
+selected = { reversed = true }
+
+# : ]]]
+
+
+# : Tabs [[[
+
+[tabs]
+active = { fg = "{{colors.primary.dark.hex}}", bold = true, bg = "{{colors.surface.dark.hex}}" }
+inactive = { fg = "{{colors.secondary.dark.hex}}", bg = "{{colors.surface.dark.hex}}" }
+sep_inner = { open = "[", close = "]" }
+
+# : ]]]
+
+
+# : Completion [[[
+
+[cmp]
+border = { fg = "{{colors.primary.dark.hex}}", bg = "{{colors.on_primary.dark.hex}}" }
+
+# : ]]]
+
+
+# : Tasks [[[
+
+[tasks]
+border = { fg = "{{colors.primary.dark.hex}}" }
+title = {}
+hovered = { fg = "{{colors.tertiary_container.dark.hex}}", underline = true }
+
+# : ]]]
+
+
+# : Which [[[
+
+[which]
+cols = 3
+mask = { bg = "{{colors.surface.dark.hex}}" }
+cand = { fg = "{{colors.primary.dark.hex}}" }
+rest = { fg = "{{colors.on_primary.dark.hex}}" }
+desc = { fg = "{{colors.on_surface.dark.hex}}" }
+separator = " ▶ "
+separator_style = { fg = "{{colors.on_surface.dark.hex}}" }
+
+# : ]]]
+
+# : Spotter [[[
+
+[spot]
+border   = { fg = "{{colors.primary.dark.hex}}" }
+title    = { fg = "{{colors.primary.dark.hex}}" }
+tbl_col  = { fg = "{{colors.on_surface.dark.hex}}" }
+tbl_cell = { fg = "{{colors.on_surface.dark.hex}}", bg = "{{colors.surface.dark.hex}}" }
+
+# : ]]]
+
+
+# : Help [[[
+
+[help]
+on = { fg = "{{colors.on_surface.dark.hex}}" }
+run = { fg = "{{colors.on_surface.dark.hex}}" }
+hovered = { reversed = true, bold = true }
+footer = { fg = "{{colors.on_secondary.dark.hex}}", bg = "{{colors.secondary.dark.hex}}" }
+
+# : ]]]
+
+
+# : Notify [[[
+
+[notify]
+title_info = { fg = "{{colors.tertiary.dark.hex}}" }
+title_warn = { fg = "{{colors.primary.dark.hex}}" }
+title_error = { fg = "{{colors.error.dark.hex}}" }
+
+# : ]]]
+
+
+# : File-specific styles [[[
+
+[filetype]
+
+rules = [
+    # Images
+    { mime = "image/*", fg = "#94e2d5" },
+
+    # Media
+    { mime = "{audio,video}/*", fg = "#f9e2af" },
+
+    # Archives
+    { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#f5c2e7" },
+
+    # Documents
+    { mime = "application/{pdf,doc,rtf}", fg = "#a6e3a1" },
+
+    # Special files
+    { mime = "*", is = "orphan", fg = "{{colors.on_error_container.dark.hex}}", bg = "{{colors.error_container.dark.hex}}" },
+    { mime = "application/*exec*", fg = "{{colors.error.dark.hex}}" },
+
+    # Fallback
+    { url = "*", fg = "{{colors.on_surface.dark.hex}}" },
+    { url = "*/", fg = "{{colors.primary.dark.hex}}" },
+]
+
+# : ]]]
+
+# : Icons {{{
+
+[icon]
+globs = []
+dirs  = [
+	{ name = ".config", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".git", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".github", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".npm", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "Desktop", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "Development", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "Documents", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "Downloads", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "Library", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "Movies", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "Music", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "Pictures", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "Public", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "Videos", text = "", fg = "{{colors.primary.dark.hex}}" },
+]
+files = [
+	{ name = ".babelrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".bash_profile", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".bashrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".clang-format", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".clang-tidy", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".codespellrc", text = "󰓆", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".condarc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".dockerignore", text = "󰡨", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".ds_store", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".editorconfig", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".env", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".eslintignore", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".eslintrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".git-blame-ignore-revs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".gitattributes", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".gitconfig", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".gitignore", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".gitlab-ci.yml", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".gitmodules", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".gtkrc-2.0", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".gvimrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".justfile", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".luacheckrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".luaurc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".mailmap", text = "󰊢", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".nanorc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".npmignore", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".npmrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".nuxtrc", text = "󱄆", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".nvmrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".pnpmfile.cjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".pre-commit-config.yaml", text = "󰛢", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".prettierignore", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".prettierrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".prettierrc.cjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".prettierrc.js", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".prettierrc.json", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".prettierrc.json5", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".prettierrc.mjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".prettierrc.toml", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".prettierrc.yaml", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".prettierrc.yml", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".pylintrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".settings.json", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".SRCINFO", text = "󰣇", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".vimrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".Xauthority", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".xinitrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".Xresources", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".xsession", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".zprofile", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".zshenv", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = ".zshrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "_gvimrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "_vimrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "AUTHORS", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "AUTHORS.txt", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "brewfile", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bspwmrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "build", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "build.gradle", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "build.zig.zon", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bun.lock", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bun.lockb", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cantorrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "checkhealth", text = "󰓙", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cmakelists.txt", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "code_of_conduct", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "code_of_conduct.md", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "commit_editmsg", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "commitlint.config.js", text = "󰜘", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "commitlint.config.ts", text = "󰜘", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "compose.yaml", text = "󰡨", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "compose.yml", text = "󰡨", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "config", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "containerfile", text = "󰡨", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "copying", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "copying.lesser", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "Directory.Build.props", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "Directory.Build.targets", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "Directory.Packages.props", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "docker-compose.yaml", text = "󰡨", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "docker-compose.yml", text = "󰡨", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "dockerfile", text = "󰡨", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "eslint.config.cjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "eslint.config.js", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "eslint.config.mjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "eslint.config.ts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ext_typoscript_setup.txt", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "favicon.ico", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fp-info-cache", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fp-lib-table", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "FreeCAD.conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "Gemfile", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gnumakefile", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "go.mod", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "go.sum", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "go.work", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gradle-wrapper.properties", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gradle.properties", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gradlew", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "groovy", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gruntfile.babel.js", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gruntfile.coffee", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gruntfile.js", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gruntfile.ts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gtkrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gulpfile.babel.js", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gulpfile.coffee", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gulpfile.js", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gulpfile.ts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "hypridle.conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "hyprland.conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "hyprlandd.conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "hyprlock.conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "hyprpaper.conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "hyprsunset.conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "i18n.config.js", text = "󰗊", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "i18n.config.ts", text = "󰗊", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "i3blocks.conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "i3status.conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "index.theme", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ionic.config.json", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "Jenkinsfile", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "justfile", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kalgebrarc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kdeglobals", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kdenlive-layoutsrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kdenliverc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kritadisplayrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kritarc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "license", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "license.md", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "lxde-rc.xml", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "lxqt.conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "makefile", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mix.lock", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mpv.conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "next.config.cjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "next.config.js", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "next.config.ts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "node_modules", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "nuxt.config.cjs", text = "󱄆", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "nuxt.config.js", text = "󱄆", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "nuxt.config.mjs", text = "󱄆", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "nuxt.config.ts", text = "󱄆", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "package-lock.json", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "package.json", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "PKGBUILD", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "platformio.ini", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "playwright.config.cjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "playwright.config.cts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "playwright.config.js", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "playwright.config.mjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "playwright.config.mts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "playwright.config.ts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pnpm-lock.yaml", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pnpm-workspace.yaml", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pom.xml", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "prettier.config.cjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "prettier.config.js", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "prettier.config.mjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "prettier.config.ts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "prisma.config.mts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "prisma.config.ts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "procfile", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "PrusaSlicer.ini", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "PrusaSlicerGcodeViewer.ini", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "py.typed", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "QtProject.conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "rakefile", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "readme", text = "󰂺", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "readme.md", text = "󰂺", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "rmd", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "robots.txt", text = "󰚩", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "security", text = "󰒃", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "security.md", text = "󰒃", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "settings.gradle", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "svelte.config.js", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sxhkdrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sym-lib-table", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tailwind.config.js", text = "󱏿", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tailwind.config.mjs", text = "󱏿", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tailwind.config.ts", text = "󱏿", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tmux.conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tmux.conf.local", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tsconfig.json", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "unlicense", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vagrantfile", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vercel.json", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vite.config.cjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vite.config.cts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vite.config.js", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vite.config.mjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vite.config.mts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vite.config.ts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vitest.config.cjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vitest.config.cts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vitest.config.js", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vitest.config.mjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vitest.config.mts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vitest.config.ts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vlcrc", text = "󰕼", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "webpack", text = "󰜫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "weston.ini", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "workspace", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "wrangler.jsonc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "wrangler.toml", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xdph.conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xmobarrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xmobarrc.hs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xmonad.hs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xorg.conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xsettingsd.conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+]
+exts = [
+	{ name = "3gp", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "3mf", text = "󰆧", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "7z", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "a", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "aac", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ada", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "adb", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ads", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ai", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "aif", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "aiff", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "android", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ape", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "apk", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "apl", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "app", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "applescript", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "asc", text = "󰦝", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "asm", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ass", text = "󰨖", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "astro", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "avif", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "awk", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "azcli", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bak", text = "󰁯", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bash", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bat", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bazel", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bib", text = "󱉟", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bicep", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bicepparam", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bin", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "blade.php", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "blend", text = "󰂫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "blp", text = "󰺾", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bmp", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bqn", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "brep", text = "󰻫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bz", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bz2", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bz3", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "bzl", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "c", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "c++", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cache", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cast", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cbl", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ccm", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cfc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cfg", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cfm", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "clj", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cljc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cljd", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cljs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cmake", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cob", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cobol", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "coffee", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "conda", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "conf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "config.ru", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cow", text = "󰆚", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cp", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cpp", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cppm", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cpy", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cr", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "crdownload", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cs", text = "󰌛", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "csh", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cshtml", text = "󱦗", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cson", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "csproj", text = "󰪮", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "css", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "csv", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cu", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cue", text = "󰲹", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cuh", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cxx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "cxxm", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "d", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "d.ts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "dart", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "db", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "dconf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "desktop", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "diff", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "dll", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "doc", text = "󰈬", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "Dockerfile", text = "󰡨", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "dockerignore", text = "󰡨", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "docx", text = "󰈬", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "dot", text = "󱁉", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "download", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "drl", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "dropbox", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "dump", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "dwg", text = "󰻫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "dxf", text = "󰻫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ebook", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ebuild", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "edn", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "eex", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ejs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "el", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "elc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "elf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "elm", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "eln", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "env", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "eot", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "epp", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "epub", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "erb", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "erl", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ex", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "exe", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "exs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "f#", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "f3d", text = "󰻫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "f90", text = "󱈚", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fbx", text = "󰆧", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fcbak", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fcmacro", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fcmat", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fcparam", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fcscript", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fcstd", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fcstd1", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fctb", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fctl", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fdmdownload", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "feature", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fish", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "flac", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "flc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "flf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fnl", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fodg", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fodp", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fods", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fodt", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "frag", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fsi", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fsscript", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "fsx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gcode", text = "󰐫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gd", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gemspec", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "geom", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gif", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "git", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "glb", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gleam", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "glsl", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gnumakefile", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "go", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "godot", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gpr", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gql", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gradle", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "graphql", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gresource", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gv", text = "󱁉", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "gz", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "h", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "haml", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "hbs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "heex", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "hex", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "hh", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "hpp", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "hrl", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "hs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "htm", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "html", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "http", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "huff", text = "󰡘", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "hurl", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "hx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "hxx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ical", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "icalendar", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ico", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ics", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ifb", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ifc", text = "󰻫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ige", text = "󰻫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "iges", text = "󰻫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "igs", text = "󰻫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "image", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "img", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "import", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "info", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ini", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ino", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ipynb", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "iso", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ixx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "jar", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "java", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "jl", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "jpeg", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "jpg", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "js", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "json", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "json5", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "jsonc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "jsx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "jwmrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "jxl", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kbx", text = "󰯄", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kdb", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kdbx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kdenlive", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kdenlivetitle", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kicad_dru", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kicad_mod", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kicad_pcb", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kicad_prl", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kicad_pro", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kicad_sch", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kicad_sym", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kicad_wks", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ko", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kpp", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kra", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "krz", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ksh", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kt", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "kts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "lck", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "leex", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "less", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "lff", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "lhs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "lib", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "license", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "liquid", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "lock", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "log", text = "󰌱", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "lrc", text = "󰨖", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "lua", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "luac", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "luau", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "m", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "m3u", text = "󰲹", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "m3u8", text = "󰲹", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "m4a", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "m4v", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "magnet", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "makefile", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "markdown", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "material", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "md", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "md5", text = "󰕥", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mdx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mint", text = "󰌪", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mk", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mkv", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ml", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mli", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mm", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mo", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mobi", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mojo", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mov", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mp3", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mp4", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mpp", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "msf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "mustache", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "nfo", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "nim", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "nix", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "norg", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "nswag", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "nu", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "o", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "obj", text = "󰆧", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "odf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "odg", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "odin", text = "󰟢", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "odp", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ods", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "odt", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "oga", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ogg", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ogv", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ogx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "opus", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "org", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "otf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "out", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "part", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "patch", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pck", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pcm", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pdf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "php", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pl", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pls", text = "󰲹", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ply", text = "󰆧", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pm", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "png", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "po", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pot", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pp", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ppt", text = "󰈧", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pptx", text = "󰈧", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "prisma", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pro", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ps1", text = "󰨊", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "psb", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "psd", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "psd1", text = "󰨊", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "psm1", text = "󰨊", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pub", text = "󰷖", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pxd", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pxi", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "py", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pyc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pyd", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pyi", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pyo", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pyw", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "pyx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "qm", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "qml", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "qrc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "qss", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "query", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "R", text = "󰟔", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "r", text = "󰟔", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "rake", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "rar", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "rasi", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "razor", text = "󱦘", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "rb", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "res", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "resi", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "rlib", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "rmd", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "rproj", text = "󰗆", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "rs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "rss", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "s", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sass", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sbt", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "scad", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "scala", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "scm", text = "󰘧", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "scss", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sh", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sha1", text = "󰕥", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sha224", text = "󰕥", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sha256", text = "󰕥", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sha384", text = "󰕥", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sha512", text = "󰕥", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sig", text = "󰘧", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "signature", text = "󰘧", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "skp", text = "󰻫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sldasm", text = "󰻫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sldprt", text = "󰻫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "slim", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sln", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "slnx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "slvs", text = "󰻫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sml", text = "󰘧", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "so", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sol", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "spec.js", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "spec.jsx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "spec.ts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "spec.tsx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "spx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sql", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sqlite", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sqlite3", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "srt", text = "󰨖", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ssa", text = "󰨖", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ste", text = "󰻫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "step", text = "󰻫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "stl", text = "󰆧", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "stories.js", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "stories.jsx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "stories.mjs", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "stories.svelte", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "stories.ts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "stories.tsx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "stories.vue", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "stp", text = "󰻫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "strings", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "styl", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sub", text = "󰨖", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sublime", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "suo", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "sv", text = "󰍛", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "svelte", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "svg", text = "󰜡", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "svgz", text = "󰜡", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "svh", text = "󰍛", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "swift", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "t", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tbc", text = "󰛓", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tcl", text = "󰛓", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "templ", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "terminal", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "test.js", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "test.jsx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "test.ts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "test.tsx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tex", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tfvars", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tgz", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tmpl", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tmux", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "toml", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "torrent", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tres", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ts", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tscn", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tsconfig", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "tsx", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ttf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "twig", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "txt", text = "󰈙", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "txz", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "typ", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "typoscript", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "ui", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "v", text = "󰍛", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vala", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vert", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vh", text = "󰍛", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vhd", text = "󰍛", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vhdl", text = "󰍛", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vi", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vim", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vsh", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vsix", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "vue", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "wasm", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "wav", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "webm", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "webmanifest", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "webp", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "webpack", text = "󰜫", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "wma", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "wmv", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "woff", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "woff2", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "wrl", text = "󰆧", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "wrz", text = "󰆧", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "wv", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "wvc", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "x", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xaml", text = "󰙳", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xcf", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xcplayground", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xcstrings", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xls", text = "󰈛", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xlsx", text = "󰈛", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xm", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xml", text = "󰗀", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xpi", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xslt", text = "󰗀", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xul", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "xz", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "yaml", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "yml", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "zig", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "zip", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "zsh", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "zst", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ name = "🔥", text = "", fg = "{{colors.primary.dark.hex}}" },
+]
+conds = [
+	# Special files
+	{ if = "orphan", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ if = "link", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ if = "block", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ if = "char", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ if = "fifo", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ if = "sock", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ if = "sticky", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ if = "dummy", text = "", fg = "{{colors.primary.dark.hex}}" },
+
+	# Fallback
+	{ if = "dir", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ if = "exec", text = "", fg = "{{colors.primary.dark.hex}}" },
+	{ if = "!dir", text = "", fg = "{{colors.primary.dark.hex}}" },
+]
+
+# : }}}

@@ -1,0 +1,36 @@
+[config]
+
+[templates.fuzzel]
+input_path = "~/.config/noctalia/templates/fuzzel.conf"
+output_path = "~/.config/fuzzel/themes/noctalia"
+
+
+[templates.kitty]
+input_path = "~/.config/noctalia/templates/kitty.conf"
+output_path = "~/.config/kitty/themes/noctalia.conf"
+post_hook = "kitty @ --to unix:$(ls /tmp/nirikitty-none-* | head -n 1) set-colors -a ~/.config/kitty/themes/noctalia.conf"
+
+[templates.cava]
+input_path = "~/.config/noctalia/templates/cava.ini"
+output_path = "~/.config/cava/themes/noctalia"
+post_hook = "pkill -USR1 cava"
+
+
+[templates.yazi]
+input_path = "~/.config/noctalia/templates/yazi.toml"
+output_path = "~/.config/yazi/flavors/noctalia.yazi/flavor.toml"
+
+
+[templates.starship]
+input_path = "~/.config/noctalia/templates/starship.toml"
+output_path = "~/.config/starship/niri.toml"
+
+[templates.code]
+input_path = "~/.config/noctalia/templates/code.json"
+output_path = "~/.vscode/extensions/noctalia.noctaliatheme-0.0.5/themes/NoctaliaTheme-color-theme.json"
+
+[templates.btop]
+input_path = "~/.config/noctalia/templates/btop.theme"
+output_path = "~/.config/btop/themes/noctalia.theme"
+
+
