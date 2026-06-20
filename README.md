@@ -50,4 +50,11 @@ config/         # Config directories (~/.config/<name>)
 
 ## Screenshots
 
+### effect 1 (niri)
+
 ![Effect 1](pic/effect1.png)
+
+### effect 2 (kde)
+
+![Effect 2](pic/effect2.png)
+
