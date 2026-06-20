@@ -4,7 +4,7 @@ Arch Linux dotfiles backup. Last updated: 2026-06-19.
 
 ## Structure
 
-
+```
 home/           # Top-level dotfiles (~/.*)
   .zshrc
   .bashrc
@@ -36,16 +36,17 @@ config/         # Config directories (~/.config/<name>)
   pacseek/      # Pacman frontend
   yay/          # AUR helper
   ...
+```
 
 ## Key Details
 
 - **Compositor**: Niri (scrollable-tiling Wayland compositor)
 - **Shell**: Zsh with Oh-My-Zsh + Starship prompt
 - **Input**: Fcitx5 + Rime (Chinese input)
-- **DE/Theme**: KDE Plasma + Kvantum + adw-gtk3
+- **DE/Theme**: KDE Plasma + adw-gtk3
 - **Font**: ChillRoundM
 - **Icons**: Tela
-- **Cursor**: hei_cursors
+- **Cursor**: cat_cursors(on niri)/hei_cursors(on kde)
 
 ## Screenshots
 
