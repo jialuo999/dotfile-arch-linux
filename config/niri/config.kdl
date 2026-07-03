@@ -9,6 +9,7 @@ environment {
 	XMODIFIERS "@im=fcitx"
 	QT_QPA_PLATFORM "wayland;xcb" //Qt应用支持
 	ELECTRON_OZONE_PLATFORM_HINT "auto"// Electron > 28应用支持
+		// QQ的Electron不响应ELECTRON_OZONE_PLATFORM_HINT环境变量，需用 ~/.config/qq-flags.conf 传入wayland参数
 }
 
 

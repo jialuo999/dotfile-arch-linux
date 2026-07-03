@@ -36,6 +36,7 @@ config/         # Config directories (~/.config/<name>)
   pacseek/      # Pacman frontend
   yay/          # AUR helper
   fontconfig/   # Font configuration (CJK, aliases)
+  qq-flags.conf # QQ Electron wayland flags (env var workaround)
   ...
 ```
 
@@ -45,6 +46,7 @@ config/         # Config directories (~/.config/<name>)
 - **Shell**: Zsh with Oh-My-Zsh + Starship prompt
 - **niri bar**: noctalia-shell
 - **KDE Plasma Theme**:  ChromeOS-dark
+- **QQ Wayland**: Electron Ozone env var 对 QQ 失效，改用 `~/.config/qq-flags.conf` 传入 `--ozone-platform=wayland` 等参数
 - **Font**: ChillRoundM
 - **Icons**: Tela
 - **Cursor**: cat_cursors(on niri)/hei_cursors(on kde)
