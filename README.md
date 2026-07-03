@@ -1,5 +1,7 @@
 # dotfile-arch-linux
 
+[中文版](README_zh.md)
+
 Arch Linux dotfiles backup. Last updated: 2026-07-03.
 
 ## Structure

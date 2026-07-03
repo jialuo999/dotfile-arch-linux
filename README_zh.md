@@ -1,5 +1,7 @@
 # dotfile-arch-linux
 
+[English](README.md)
+
 Arch Linux dotfiles 备份。最近更新：2026-07-03。
 
 ## 目录结构
