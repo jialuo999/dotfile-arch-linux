@@ -58,7 +58,7 @@ config/         # Config directories (~/.config/<name>)
 
 ### Niri
 
-![Effect 1](pic/effect1.png)
+![Effect 1](pic/effect3.png)
 
 ### KDE
 
