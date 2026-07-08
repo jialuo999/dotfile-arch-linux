@@ -1,18 +1,14 @@
 //按键绑定
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+E {spawn-sh "env GSK_RENDERER=gl GDK_IM_MODULE=fcitx nautilus";} //解决文件启动慢、重命名窗口无法弹出问题
-    Mod+P {spawn "~/.config/cliphist/cliphist-fuzzel-img";} //剪贴板历史
-    Mod+shift+D { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; } //noctalia-shell的app launcher
-
-    // Suggested binds for running programs: terminal, app launcher, screen locker.
+    Mod+E {spawn-sh "env GSK_RENDERER=gl GDK_IM_MODULE=fcitx nautilus";}
+    //Mod+P {spawn "~/.config/cliphist/cliphist-fuzzel-img";}
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "sh" "-c" "~/bin/fuzzel-hitokoto.sh"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+Shift+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "sh" "-c" "~/bin/fuzzel-hitokoto.sh"; }
+    Mod+D hotkey-overlay-title="Run an App: noctalia" {spawn "noctalia" "msg" "panel-toggle" "launcher"; }  
+    Mod+P {spawn "noctalia" "msg" "panel-toggle" "clipboard"; }
+    Mod+Apostrophe {spawn "noctalia" "msg" "panel-open" "launcher" "/emo"; }
 
-    // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
-    // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
-    // For example, this is a standard bind to toggle the screen reader (orca).
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.

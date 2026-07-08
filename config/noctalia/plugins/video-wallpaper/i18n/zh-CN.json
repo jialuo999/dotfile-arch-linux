@@ -1,0 +1,199 @@
+{
+  "barWidget": {
+    "contextMenu": {
+      "panel": "面板",
+      "enable": "启用",
+      "disable": "禁用",
+      "pause": "暂停",
+      "play": "播放",
+      "unmute": "取消静音",
+      "mute": "静音"
+    },
+    "tooltip": "打开视频壁纸管理器。"
+  },
+  "common": {
+    "tool_row": {
+      "random": {
+        "text": "随机",
+        "tooltip": "从壁纸文件夹中随机选择一张壁纸。"
+      },
+      "clear": {
+        "text": "清除",
+        "tooltip": "清除当前壁纸。"
+      },
+      "pause": {
+        "text": "暂停",
+        "tooltip": "暂停视频壁纸。"
+      },
+      "play": {
+        "text": "播放",
+        "tooltip": "继续播放视频壁纸。"
+      },
+      "unmute": {
+        "text": "取消静音",
+        "tooltip": "取消视频壁纸静音。"
+      },
+      "mute": {
+        "text": "静音",
+        "tooltip": "将视频壁纸静音。"
+      }
+    }
+  },
+  "main": {
+    "no_backend_found": "未找到 {backend}！"
+  },
+  "panel": {
+    "title": "视频壁纸管理器",
+    "tool_row": {
+      "folder": {
+        "text": "文件夹",
+        "tooltip": "选择另一个包含壁纸的文件夹。"
+      },
+      "refresh": {
+        "text": "刷新",
+        "tooltip": "刷新缩略图，移除旧图并生成新图。"
+      },
+      "monitor_specific": {
+        "tooltip": "启用 / 禁用按显示器单独设置。"
+      },
+      "enabled": {
+        "label": "已启用"
+      }
+    },
+    "loading": "加载中...",
+    "file_picker": {
+      "title": "选择壁纸文件夹"
+    }
+  },
+  "settings": {
+    "toggle": {
+      "label": "启用视频壁纸",
+      "description": "在下方选择你偏好的视频渲染后端。"
+    },
+    "backend": {
+      "label": "当前后端",
+      "description": "用于渲染视频壁纸的后端。",
+      "qt6_multimedia": "Qt6 多媒体",
+      "mpvpaper": "Mpvpaper"
+    },
+    "monitor_specific": {
+      "label": "按显示器单独设置",
+      "description": "选择是否让部分设置按显示器分别生效。（仅多显示器可用）"
+    },
+    "tab_bar": {
+      "general": "常规",
+      "automation": "自动化",
+      "advanced": "高级"
+    },
+    "general": {
+      "wallpapers_folder": {
+        "title": {
+          "label": "壁纸文件夹",
+          "description": "包含所有视频壁纸的文件夹。"
+        },
+        "text_input": {
+          "placeholder": "/path/to/folder/with/wallpapers"
+        },
+        "icon_button": {
+          "tooltip": "选择壁纸文件夹"
+        },
+        "file_picker": {
+          "title": "选择壁纸文件夹"
+        }
+      },
+      "select_wallpaper": {
+        "title": {
+          "label": "选择壁纸",
+          "description": "选择当前正在播放的视频壁纸。"
+        },
+        "icon_button": {
+          "tooltip": "选择当前正在播放的壁纸。"
+        },
+        "file_picker": {
+          "title": "选择当前壁纸"
+        }
+      },
+      "fill_mode": {
+        "label": "填充模式",
+        "description": "壁纸适配到背景时使用的模式。",
+        "stretch": "拉伸",
+        "fit": "适应",
+        "crop": "裁剪"
+      },
+      "orientation": {
+        "label": "方向",
+        "description": "视频播放方向，可为 90 的任意倍数。"
+      },
+      "volume": {
+        "label": "音量",
+        "description": "当前播放视频的音量。"
+      }
+    },
+    "automation": {
+      "toggle": {
+        "label": "自动化",
+        "description": "计划自动切换壁纸。"
+      },
+      "mode": {
+        "label": "切换模式",
+        "description": "选择新壁纸的模式。",
+        "random": "随机",
+        "alphabetically": "按字母顺序"
+      },
+      "time": {
+        "label": "时间",
+        "description": "切换壁纸的时间间隔。",
+        "m": "{minute}分",
+        "h": "{hour}时",
+        "hour": "{count} 小时",
+        "hour-plural": "{count} 小时",
+        "minute": "{count} 分钟",
+        "minute-plural": "{count} 分钟",
+        "custom": {
+          "create": {
+            "tooltip": "创建自定义时间。",
+            "label": "添加自定义时间",
+            "description": "按 HH:MM 输入时间（例如 1:20）",
+            "placeholder": "例如：1:15",
+            "save": "保存",
+            "cancel": "取消"
+          },
+          "remove": "移除"
+        }
+      }
+    },
+    "advanced": {
+      "fill_mode": {
+        "label": "填充模式",
+        "description": "",
+        "fit": "适应",
+        "crop": "裁剪",
+        "stretch": "拉伸"
+      },
+      "profile": {
+        "label": "Mpv 配置",
+        "description": "mpv 使用的配置。使用 fast 可获得更好性能。",
+        "default": "默认",
+        "fast": "快速",
+        "high_quality": "高质量",
+        "low_latency": "低延迟"
+      },
+      "hardware_acceleration": {
+        "label": "硬件加速",
+        "description": "将视频解码从 CPU 卸载到 GPU / 专用硬件。"
+      },
+      "mpv_socket": {
+        "label": "Mpvpaper Socket",
+        "description": "Noctalia 连接的 mpvpaper socket。",
+        "input_placeholder": "例如：/tmp/mpv-socket"
+      },
+      "orientation": {
+        "label": "方向",
+        "description": "视频播放方向，可为 90 度的任意倍数。"
+      },
+      "no_backend": {
+        "label": "没有可用的后端..."
+      }
+    }
+  }
+}

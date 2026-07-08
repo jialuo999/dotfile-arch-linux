@@ -2,9 +2,15 @@
     {
         "data": [
             {
+                "abmLevel": 0,
                 "allowDdcCi": true,
                 "allowSdrSoftwareBrightness": false,
                 "autoBrightnessCurve": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
                     0,
                     0,
                     0,
@@ -24,6 +30,8 @@
                 "edidHash": "410ad42b899962732116ea46a21f1f1c",
                 "edidIdentifier": "CMN 5714 65441 21 2024 0",
                 "edrPolicy": "always",
+                "hdrColorProfileSource": "EDID",
+                "hdrIccProfilePath": "",
                 "highDynamicRange": false,
                 "iccProfilePath": "",
                 "maxBitsPerColor": 0,

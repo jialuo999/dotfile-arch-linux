@@ -1,36 +1,36 @@
-[config]
+[theme.templates]
 
-[templates.fuzzel]
-input_path = "~/.config/noctalia/templates/fuzzel.conf"
-output_path = "~/.config/fuzzel/themes/noctalia"
+# 内置模板启用（推荐）
+enable_builtin_templates = true
+builtin_ids = ["btop", "kitty", "yazi", "starship", "cava"]   # 根据需要添加
 
+# === 用户自定义模板 ===
+#[theme.templates.user.fuzzel]
+#input_path = "~/.config/noctalia/templates/fuzzel.conf"
+#output_path = "~/.config/fuzzel/themes/noctalia"
 
-[templates.kitty]
+[theme.templates.user.kitty]
 input_path = "~/.config/noctalia/templates/kitty.conf"
 output_path = "~/.config/kitty/themes/noctalia.conf"
 post_hook = "kitty @ --to unix:$(ls /tmp/nirikitty-none-* | head -n 1) set-colors -a ~/.config/kitty/themes/noctalia.conf"
 
-[templates.cava]
+[theme.templates.user.cava]
 input_path = "~/.config/noctalia/templates/cava.ini"
 output_path = "~/.config/cava/themes/noctalia"
 post_hook = "pkill -USR1 cava"
 
-
-[templates.yazi]
+[theme.templates.user.yazi]
 input_path = "~/.config/noctalia/templates/yazi.toml"
 output_path = "~/.config/yazi/flavors/noctalia.yazi/flavor.toml"
 
-
-[templates.starship]
+[theme.templates.user.starship]
 input_path = "~/.config/noctalia/templates/starship.toml"
 output_path = "~/.config/starship/niri.toml"
 
-[templates.code]
+[theme.templates.user.code]   # VSCode
 input_path = "~/.config/noctalia/templates/code.json"
 output_path = "~/.vscode/extensions/noctalia.noctaliatheme-0.0.5/themes/NoctaliaTheme-color-theme.json"
 
-[templates.btop]
+[theme.templates.user.btop]
 input_path = "~/.config/noctalia/templates/btop.theme"
 output_path = "~/.config/btop/themes/noctalia.theme"
-
-

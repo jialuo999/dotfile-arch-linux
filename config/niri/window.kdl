@@ -19,10 +19,16 @@ debug {
 }
 
 //预览窗口显示noctalia shell壁纸
+//layer-rule {  //-------v4
+//  match namespace="^noctalia-overview*"
+//  place-within-backdrop true
+//}
 layer-rule {
-  match namespace="^noctalia-overview*"
+  match namespace="^noctalia-backdrop"
   place-within-backdrop true
 }
+
+
 //透明度为1的应用
 window-rule {
 	match title="图片查看器"

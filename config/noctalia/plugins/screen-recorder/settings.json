@@ -1,0 +1,22 @@
+{
+  "hideInactive": false,
+  "iconColor": "primary",
+  "directory": "/home/jialuo/Videos/ScreenRecorder",
+  "filenamePattern": "recording_yyyyMMdd_HHmmss",
+  "frameRate": "60",
+  "audioCodec": "opus",
+  "videoCodec": "h264",
+  "quality": "medium",
+  "colorRange": "limited",
+  "showCursor": false,
+  "copyToClipboard": false,
+  "audioSource": "default_output",
+  "videoSource": "portal",
+  "resolution": "original",
+  "customFrameRate": "60",
+  "restorePortalSession": false,
+  "replayEnabled": false,
+  "replayDuration": "30",
+  "customReplayDuration": "30",
+  "replayStorage": "ram"
+}

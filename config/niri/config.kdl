@@ -1,18 +1,5 @@
 //wiki页面： https://yalter.github.io/niri/Configuration:-Introduction
 
-environment {
-	LANG "zh_CN.UTF-8"
-	LC_CTYPE "en_US.UTF-8"
-	QT_QPA_PLATFORMTHEME "qt6ct"
-	QT_IM_MODULES "wayland;fcitx" //中文输入法支持,
-    QT_IM_MODULE "fcitx"
-	XMODIFIERS "@im=fcitx"
-	QT_QPA_PLATFORM "wayland;xcb" //Qt应用支持
-	ELECTRON_OZONE_PLATFORM_HINT "auto"// Electron > 28应用支持
-		// QQ的Electron不响应ELECTRON_OZONE_PLATFORM_HINT环境变量，需用 ~/.config/qq-flags.conf 传入wayland参数
-}
-
-
 input {
     keyboard {
         xkb {
@@ -87,7 +74,7 @@ input {
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 4
+    gaps 3.5
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -223,7 +210,8 @@ layout {
 spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 //把环境变量广播给整个用户
 spawn-at-startup "dbus-update-activation-environment" "--all"
-spawn-at-startup "qs" "-c" "noctalia-shell"
+//spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "noctalia"
 
 hotkey-overlay {
      skip-at-startup    //跳过开机快捷键提示
@@ -259,7 +247,6 @@ animations {
 cursor{
     //xcursor-theme "Bibata-Modern-Classic"
     xcursor-theme "cat_cursors"
-  //  xcursor-theme "hei_cursors"
     xcursor-size 81
     //hide-when-typing
 }

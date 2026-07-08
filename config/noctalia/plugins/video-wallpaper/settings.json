@@ -1,0 +1,28 @@
+{
+  "activeBackend": "mpvpaper",
+  "automationMode": "random",
+  "automationTime": 300,
+  "fillMode": "fit",
+  "mpvSocket": "/tmp/mpv-socket",
+  "profile": "default",
+  "volume": 1,
+  "wallpapersFolder": "/home/jialuo/Videos/wallpaper",
+  "thumbCacheReady": false,
+  "eDP-1": {
+    "isPlaying": true,
+    "currentWallpaper": "/home/jialuo/Videos/wallpaper/【哲风壁纸】传统建筑-卡通.mp4",
+    "volume": 1,
+    "automation": true,
+    "automationMode": "random",
+    "automationTime": 300,
+    "hardwareAcceleration": true,
+    "profile": "fast",
+    "fillMode": "crop",
+    "orientation": 0,
+    "noctaliaWallpaper": "/home/jialuo/Pictures/Wallpapers/【哲风壁纸】二次元-二次元萌系.png",
+    "isMuted": true
+  },
+  "enabled": false,
+  "monitorSpecific": false,
+  "automationCustomTime": []
+}
