@@ -2,7 +2,7 @@
 
 # 内置模板启用（推荐）
 enable_builtin_templates = true
-builtin_ids = ["btop", "kitty", "yazi", "starship", "cava"]   # 根据需要添加
+builtin_ids = ["btop", "kitty", "yazi", "starship", "cava", "fcitx5"]   # 根据需要添加
 
 # === 用户自定义模板 ===
 #[theme.templates.user.fuzzel]
@@ -34,3 +34,9 @@ output_path = "~/.vscode/extensions/noctalia.noctaliatheme-0.0.5/themes/Noctalia
 [theme.templates.user.btop]
 input_path = "~/.config/noctalia/templates/btop.theme"
 output_path = "~/.config/btop/themes/noctalia.theme"
+
+[theme.templates.user.fcitx5]
+input_path = '~/.config/noctalia/templates/fcitx5-theme.conf'
+output_path = '~/.local/share/fcitx5/themes/Matugen/theme.conf'
+post_hook= 'fcitx5 -r & disown '
+
