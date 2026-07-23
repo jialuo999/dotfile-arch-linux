@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-Arch Linux dotfiles 备份。最近更新：2026-07-03。
+Arch Linux dotfiles 备份。最近更新：2026-07-24。
 
 ## 目录结构
 
@@ -38,7 +38,10 @@ config/         # 配置目录 (~/.config/<name>)
   pacseek/      # Pacman 前端
   yay/          # AUR 助手
   fontconfig/   # 字体配置 (CJK, 别名)
+  dolphinrc     # Dolphin 文件管理器 (Niri 主力文件管理器)
   qq-flags.conf # QQ Electron wayland 参数 (环境变量失效的替代方案)
+  kglobalshortcutsrc, kdeglobals, ...  # KDE rc 文件
+  mimeapps.list # MIME 类型关联 (Zen/Dolphin 为默认应用)
   ...
 ```
 
@@ -47,8 +50,10 @@ config/         # 配置目录 (~/.config/<name>)
 - **合成器**: Niri
 - **Shell**: Zsh + Oh-My-Zsh + Starship
 - **状态栏**: noctalia-shell
+- **文件管理器**: Dolphin (Niri 主力文件管理器)
 - **KDE Plasma 主题**: ChromeOS-dark
 - **QQ Wayland**: Electron Ozone 环境变量对 QQ 失效，改用 `~/.config/qq-flags.conf` 传入 `--ozone-platform=wayland` 等参数
+- **Zen 浏览器**: 使用 noctalia 配色
 - **字体**: ChillRoundM
 - **图标**: Tela
 - **光标**: cat_cursors (niri) / hei_cursors (KDE)

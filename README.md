@@ -2,7 +2,7 @@
 
 [中文版](README_zh.md)
 
-Arch Linux dotfiles backup. Last updated: 2026-07-03.
+Arch Linux dotfiles backup. Last updated: 2026-07-24.
 
 ## Structure
 
@@ -38,7 +38,10 @@ config/         # Config directories (~/.config/<name>)
   pacseek/      # Pacman frontend
   yay/          # AUR helper
   fontconfig/   # Font configuration (CJK, aliases)
+  dolphinrc     # Dolphin file manager (main fm on Niri)
   qq-flags.conf # QQ Electron wayland flags (env var workaround)
+  kglobalshortcutsrc, kdeglobals, ...  # KDE rc files
+  mimeapps.list # MIME type associations (Zen/Dolphin as defaults)
   ...
 ```
 
@@ -47,8 +50,10 @@ config/         # Config directories (~/.config/<name>)
 - **Compositor**: Niri
 - **Shell**: Zsh with Oh-My-Zsh + Starship prompt
 - **Niri bar**: noctalia-shell
+- **File Manager**: Dolphin (primary on Niri)
 - **KDE Plasma Theme**: ChromeOS-dark
 - **QQ Wayland**: Electron Ozone env var has no effect on QQ; use `~/.config/qq-flags.conf` to pass `--ozone-platform=wayland` and other flags
+- **Zen Browser**: uses noctalia color scheme
 - **Font**: ChillRoundM
 - **Icons**: Tela
 - **Cursor**: cat_cursors (on niri) / hei_cursors (on KDE)

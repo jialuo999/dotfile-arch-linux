@@ -62,7 +62,7 @@ window-rule {
 }
 /-window-rule {
    match app-id="code"
-   opacity 0.95
+   opacity 0.90
    background-effect {
         blur true
     }

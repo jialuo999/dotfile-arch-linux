@@ -28,7 +28,7 @@ input {
         // drag false
         // drag-lock
         natural-scroll
-        // accel-speed 0.2
+        accel-speed 0.5
         // accel-profile "flat"
         // scroll-method "two-finger"
         // disabled-on-external-mouse
@@ -212,6 +212,8 @@ spawn-at-startup "wl-paste" "--watch" "cliphist" "store"
 spawn-at-startup "dbus-update-activation-environment" "--all"
 //spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "noctalia"
+//dolphin文件打开方式生成应用缓存
+spawn-at-startup "bash" "-c" "systemctl --user import-environment XDG_MENU_PREFIX && kbuildsycoca6 --noincremental"
 
 hotkey-overlay {
      skip-at-startup    //跳过开机快捷键提示

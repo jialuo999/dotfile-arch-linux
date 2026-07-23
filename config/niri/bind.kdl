@@ -1,7 +1,8 @@
 //按键绑定
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+E {spawn-sh "env GSK_RENDERER=gl GDK_IM_MODULE=fcitx nautilus";}
+    //Mod+E {spawn-sh "env GSK_RENDERER=gl GDK_IM_MODULE=fcitx nautilus";}
+    Mod+E {spawn "dolphin";}
     //Mod+P {spawn "~/.config/cliphist/cliphist-fuzzel-img";}
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Shift+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "sh" "-c" "~/bin/fuzzel-hitokoto.sh"; }

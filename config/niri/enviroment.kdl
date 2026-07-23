@@ -11,7 +11,11 @@ environment {
 	QT_QPA_PLATFORM "wayland;xcb" 
    // ELECTRON_OZONE_PLATFORM_HINT "auto"// Electron > 28应用支持
     XCURSOR_THEME "cat_cursors"
-    //ICON_THEME "Tela"
+    ICON_THEME "Tela"
+    GTK_SCALE "2"
+
+    XDG_MENU_PREFIX "plasma-"
+
 }
 
 //debug {

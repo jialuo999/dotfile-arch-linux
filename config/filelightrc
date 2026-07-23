@@ -1,0 +1,8 @@
+[filelight_part]
+contrast=100
+scanAcrossMounts=false
+scanRemoteMounts=false
+scheme=0
+showFoldersSidebar=true
+showSmallFiles=true
+skipList[$e]=/dev,/proc,/sys,/root
