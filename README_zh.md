@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-Arch Linux dotfiles 备份。最近更新：2026-07-24。
+Arch Linux dotfiles 备份。最近更新：2026-09-27。
 
 ## 目录结构
 
@@ -35,6 +35,7 @@ config/         # 配置目录 (~/.config/<name>)
   gtk-3.0/gtk-4.0/  # GTK 主题配置
   environment.d/    # 环境变量
   xsettingsd/   # Xsettings 守护进程
+  xdg-desktop-portal/  # 桌面门户 (portals.conf：优先使用 KDE portal)
   pacseek/      # Pacman 前端
   yay/          # AUR 助手
   fontconfig/   # 字体配置 (CJK, 别名)
@@ -58,6 +59,7 @@ config/         # 配置目录 (~/.config/<name>)
 - **图标**: Tela
 - **光标**: cat_cursors (niri) / hei_cursors (KDE)
 - **终端字体**: JetBrainsMonoNLNF-Regular
+- **XDG Desktop Portal**: `~/.config/xdg-desktop-portal/portals.conf` 设置 `default=kde`，优先使用 KDE 的 portal
 
 ## 截图
 

@@ -2,7 +2,7 @@
 
 [中文版](README_zh.md)
 
-Arch Linux dotfiles backup. Last updated: 2026-07-24.
+Arch Linux dotfiles backup. Last updated: 2026-09-27.
 
 ## Structure
 
@@ -35,6 +35,7 @@ config/         # Config directories (~/.config/<name>)
   gtk-3.0/gtk-4.0/  # GTK theme config
   environment.d/    # Environment variables
   xsettingsd/   # Xsettings daemon
+  xdg-desktop-portal/  # Desktop portal (portals.conf: prefer KDE portal)
   pacseek/      # Pacman frontend
   yay/          # AUR helper
   fontconfig/   # Font configuration (CJK, aliases)
@@ -58,6 +59,7 @@ config/         # Config directories (~/.config/<name>)
 - **Icons**: Tela
 - **Cursor**: cat_cursors (on niri) / hei_cursors (on KDE)
 - **Terminal Font**: JetBrainsMonoNLNF-Regular
+- **XDG Desktop Portal**: `~/.config/xdg-desktop-portal/portals.conf` sets `default=kde`, preferring the KDE portal
 
 ## Screenshots
 
